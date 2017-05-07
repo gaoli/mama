@@ -1,0 +1,23 @@
+{
+  "name": "mama",
+  "version": "1.0.0",
+  "description": "微信小程序 - 孕妈饮食",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaoli/mama.git"
+  },
+  "author": {
+    "name": "高力",
+    "email": "3071730@qq.com",
+    "url": "http://gaoli.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gaoli/mama/issues"
+  },
+  "homepage": "https://github.com/gaoli/mama#readme"
+}
