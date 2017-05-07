@@ -4,7 +4,8 @@
   "description": "微信小程序 - 孕妈饮食",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
