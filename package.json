@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/gaoli/mama/issues"
   },
-  "homepage": "https://github.com/gaoli/mama#readme"
+  "homepage": "https://github.com/gaoli/mama#readme",
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  }
 }
