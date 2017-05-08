@@ -1,21 +1,24 @@
-/**index.wxss**/
-.userinfo {
+.bd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.category {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+  width: 250rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.category-bd {
+  margin-bottom: 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.category-ft {
+  font-size: 11pt;
+  color: #000000;
 }

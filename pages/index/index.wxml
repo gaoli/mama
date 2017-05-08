@@ -1,10 +1,8 @@
-<!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<view class="wrap">
+  <view class="bd">
+    <view class="category" wx:for="{{category}}" wx:key="id">
+      <image class="category-bd" src="./images/{{item.id}}.png"></image>
+      <text class="category-ft">{{item.name}}</text>
+    </view>
   </view>
 </view>
