@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/gaoli/mama#readme",
   "devDependencies": {
-    "tslint": "^5.2.0",
-    "tslint-eslint-rules": "^4.0.0",
-    "tslint-react": "^3.0.0"
-  },
-  "dependencies": {}
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
 }
