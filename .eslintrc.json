@@ -1,6 +1,7 @@
 {
   "extends": "airbnb",
   "globals": {
+    "wx": true,
     "App": true,
     "Page": true
   },
