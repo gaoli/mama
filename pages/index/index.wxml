@@ -1,8 +1,8 @@
-<view class="wrap">
-  <view class="bd">
-    <view class="category" wx:for="{{category}}" wx:key="id" data-category-id="{{item.id}}" bindtap="openListPage">
-      <image class="category-bd" src="./images/{{item.id}}.png"></image>
-      <text class="category-ft">{{item.name}}</text>
+<view class="page">
+  <view class="page-bd weui-grids">
+    <view class="weui-grid" wx:for="{{category}}" wx:key="id" data-category-id="{{item.id}}" bindtap="openListPage">
+      <image class="weui-grid__icon" src="./images/{{item.id}}.png"></image>
+      <text class="weui-grid__label">{{item.name}}</text>
     </view>
   </view>
 </view>
