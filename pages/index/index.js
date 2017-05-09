@@ -5,11 +5,18 @@ Page({
   data: {
 
   },
-  onReady() {
+  onLoad() {
     new AV.Query(Category).find().then((category) => {
       this.setData({
         category,
       });
+    });
+  },
+  openListPage(event) {
+    const { categoryId } = event.currentTarget.dataset;
+
+    wx.navigateTo({
+      url: `../list/list?categoryId=${categoryId}`,
     });
   },
 });
