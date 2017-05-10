@@ -3,7 +3,11 @@ import Food from '../../model/food';
 
 Page({
   onLoad(option) {
-    const { categoryId } = option;
+    const { categoryId, categoryName } = option;
+
+    wx.setNavigationBarTitle({
+      title: categoryName,
+    });
 
     new AV.Query(Food)
       .equalTo('categoryId', parseInt(categoryId, 10))

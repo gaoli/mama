@@ -13,10 +13,10 @@ Page({
     });
   },
   openListPage(event) {
-    const { categoryId } = event.currentTarget.dataset;
+    const { categoryId, categoryName } = event.currentTarget.dataset;
 
     wx.navigateTo({
-      url: `../list/list?categoryId=${categoryId}`,
+      url: `../list/list?categoryId=${categoryId}&categoryName=${categoryName}`,
     });
   },
 });
