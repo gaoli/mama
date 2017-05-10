@@ -13,7 +13,9 @@ Page({
       .equalTo('categoryId', parseInt(categoryId, 10))
       .find()
       .then((food) => {
-        console.log(food);
+        this.setData({
+          food,
+        });
       });
   },
 });

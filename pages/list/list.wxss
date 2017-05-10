@@ -1,0 +1,4 @@
+.weui-media-box__info__meta icon {
+  margin-right: 3px;
+  font-size: 13px;
+}
