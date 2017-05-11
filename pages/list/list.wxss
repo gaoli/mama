@@ -1,3 +1,11 @@
+.weui-media-box__thumb {
+  border-radius: 5px;
+}
+
+.weui-media-box__info {
+  margin-top: 5px;
+}
+
 .weui-media-box__info__meta icon {
   margin-right: 3px;
   font-size: 13px;

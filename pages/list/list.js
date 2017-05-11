@@ -11,6 +11,7 @@ Page({
 
     new AV.Query(Food)
       .equalTo('categoryId', parseInt(categoryId, 10))
+      .include('image')
       .find()
       .then((food) => {
         this.setData({
