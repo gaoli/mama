@@ -1,8 +1,8 @@
 <view class="page">
   <view class="page-bd weui-grids">
-    <view class="weui-grid" wx:for="{{category}}" wx:key="id" data-category-id="{{item.id}}" data-category-name="{{item.name}}" bindtap="openListPage">
+    <navigator class="weui-grid" wx:for="{{category}}" wx:key="id" url="../list/list?categoryId={{item.id}}&categoryName={{item.name}}">
       <image class="weui-grid__icon" src="./images/{{item.id}}.png"></image>
       <text class="weui-grid__label">{{item.name}}</text>
-    </view>
+    </navigator>
   </view>
 </view>
