@@ -5,6 +5,10 @@ Page({
   onLoad(option) {
     const { name } = option;
 
+    wx.setNavigationBarTitle({
+      title: name,
+    });
+
     new AV.Query(Food)
       .equalTo('name', name)
       .include('image')
