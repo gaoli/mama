@@ -8,7 +8,7 @@
 </template>
 
 <scroll-view style="height: {{windowHeight}}px" scroll-y="true" bindscrolltolower="handleScrollToLower">
-  <view class="weui-media-box weui-media-box_appmsg" wx:for="{{list}}" wx:key="objectId">
+  <navigator class="weui-media-box weui-media-box_appmsg" wx:for="{{list}}" wx:key="objectId" url="../food/food?name={{item.name}}">
     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
       <image class="weui-media-box__thumb" src="{{item.image.url}}" />
     </view>
@@ -21,7 +21,7 @@
         <template is="meta" data="{{user: '婴儿', info: item.baby}}" />
       </view>
     </view>
-  </view>
+  </navigator>
   <view class="weui-loadmore" wx:if="{{loading === true}}">
     <view class="weui-loading"></view>
     <view class="weui-loadmore__tips">正在加载</view>
