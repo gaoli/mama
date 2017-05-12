@@ -1,0 +1,48 @@
+<template name="result">
+  <view class="result" wx:if="{{result === 'no'}}">
+    <icon class="result-hd" type="warn" size="16" />
+    <text class="result-bd" style="color: #F76260">不能吃</text>
+  </view>
+  <view class="result" wx:if="{{result === 'warn'}}">
+    <icon class="result-hd" type="warn" color="orange" size="16" />
+    <text class="result-bd" style="color: #FFBE00">慎吃</text>
+  </view>
+  <view class="result" wx:if="{{result === 'ok'}}">
+    <icon class="result-hd" type="success" size="16" />
+    <text class="result-bd" style="color: #09BB07">能吃</text>
+  </view>
+</template>
+
+<view class="page">
+  <view class="page-hd">
+    <image class="weui-article__img" src="{{food.image.url}}" mode="aspectFill" />
+  </view>
+  <view class="page-bd weui-article">
+    <view class="weui-article__section">
+      <view class="weui-article__p">{{food.intro}}</view>
+    </view>
+    <view class="weui-article__section">
+      <view class="weui-article__section">
+        <view class="weui-article__h3">孕妇能吃{{food.name}}吗？</view>
+        <view class="weui-article__p">
+          <template is="result" data="{{result: food.pregnant}}" />
+        </view>
+        <view class="weui-article__p" wx:for="{{food.pregnantReason}}" wx:key="*this">{{item}}</view>
+      </view>
+      <view class="weui-article__section">
+        <view class="weui-article__h3">产妇能吃{{food.name}}吗？</view>
+        <view class="weui-article__p">
+          <template is="result" data="{{result: food.puerpera}}" />
+        </view>
+        <view class="weui-article__p" wx:for="{{food.puerperaReason}}" wx:key="*this">{{item}}</view>
+      </view>
+      <view class="weui-article__section">
+        <view class="weui-article__h3">婴儿能吃{{food.name}}吗？</view>
+        <view class="weui-article__p">
+          <template is="result" data="{{result: food.baby}}" />
+        </view>
+        <view class="weui-article__p" wx:for="{{food.babyReason}}" wx:key="*this">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

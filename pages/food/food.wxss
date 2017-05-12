@@ -1,0 +1,16 @@
+.weui-article__img {
+  width: 750rpx;
+}
+
+.weui-article__h3 {
+  font-size: 14pt;
+}
+
+.weui-article__p {
+  color: #888888;
+}
+
+.result-hd {
+  margin-right: 5px;
+  font-size: 11px;
+}
