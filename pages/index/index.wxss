@@ -1,0 +1,7 @@
+.weui-search-bar {
+  border: none;
+}
+
+.weui-search-bar__form {
+  height: 28px;
+}
