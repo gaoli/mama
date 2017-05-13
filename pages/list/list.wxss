@@ -3,10 +3,14 @@
 }
 
 .weui-media-box__info {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .weui-media-box__info__meta icon {
-  margin-right: 3px;
+  margin-right: 5px;
   font-size: 13px;
+}
+
+.weui-media-box__info__meta text {
+  color: #000000;
 }
