@@ -1,5 +1,4 @@
 import AV from '../../libs/av';
-import Food from '../../model/food';
 
 Page({
   data: {
@@ -45,7 +44,7 @@ Page({
     });
 
     if (value !== '') {
-      new AV.Query(Food)
+      new AV.Query('Food')
         .contains('name', value)
         .find()
         .then((foods) => {

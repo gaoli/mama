@@ -1,5 +1,4 @@
 import AV from '../../libs/av';
-import Food from '../../model/food';
 
 Page({
   onLoad(option) {
@@ -9,7 +8,7 @@ Page({
       title: name,
     });
 
-    new AV.Query(Food)
+    new AV.Query('Food')
       .equalTo('name', name)
       .include('image')
       .first()

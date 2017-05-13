@@ -1,5 +1,4 @@
 import AV from '../../libs/av';
-import Food from '../../model/food';
 
 Page({
   // 类别 ID
@@ -15,7 +14,7 @@ Page({
   limit: 10,
 
   // 查询实例
-  query: new AV.Query(Food),
+  query: new AV.Query('Food'),
 
   data: {
     list: [],
