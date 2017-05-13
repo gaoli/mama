@@ -11,11 +11,18 @@
     </view>
     <view class="weui-search-bar__cancel-btn" hidden="{{!focus}}" bindtap="hideInput">取消</view>
   </view>
-  <view class="page-bd weui-cells searchbar-result" wx:if="{{foods.length > 0}}">
-    <navigator class="weui-cell" wx:for="{{foods}}" wx:key="objectId" hover-class="weui-cell_active" url="../food/food?name={{item.name}}">
-      <view class="weui-cell__bd">
-        <view>{{item.name}}</view>
+  <view class="page-bd">
+    <view class="weui-cells searchbar-result" wx:if="{{foods.length > 0}}">
+      <navigator class="weui-cell" wx:for="{{foods}}" wx:key="objectId" hover-class="weui-cell_active" url="../food/food?name={{item.name}}">
+        <view class="weui-cell__bd">
+          <view>{{item.name}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-msg" wx:if="{{value.length > 0 && foods.length === 0}}">
+      <view class="weui-msg__text-area">
+        <view class="weui-msg__desc">暂无搜索结果，换个词试试吧</view>
       </view>
-    </navigator>
+    </view>
   </view>
 </view>
