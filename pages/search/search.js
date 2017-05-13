@@ -39,21 +39,19 @@ Page({
   handleTyping(e) {
     const { value } = e.detail;
 
-    this.setData({
-      value,
-    });
-
     if (value !== '') {
       new AV.Query('Food')
         .contains('name', value)
         .find()
         .then((foods) => {
           this.setData({
+            value,
             foods,
           });
         });
     } else {
       this.setData({
+        value,
         foods: [],
       });
     }
