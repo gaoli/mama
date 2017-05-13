@@ -1,7 +1,7 @@
 <view class="page">
   <view class="page-hd weui-search-bar">
     <view class="weui-search-bar__form">
-      <label class="weui-search-bar__label">
+      <label class="weui-search-bar__label" bindtap="openSearchPage">
         <icon class="weui-icon-search" type="search" size="14"></icon>
         <view class="weui-search-bar__text">输入食物名称</view>
       </label>

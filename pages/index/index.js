@@ -38,7 +38,9 @@ Page({
       name: '药材',
     }],
   },
-  onLoad() {
-
+  openSearchPage() {
+    wx.navigateTo({
+      url: '../search/search',
+    });
   },
 });
