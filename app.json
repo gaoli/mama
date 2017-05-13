@@ -2,11 +2,12 @@
   "pages":[
     "pages/index/index",
     "pages/list/list",
-    "pages/food/food"
+    "pages/food/food",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#EFEFF4",
+    "navigationBarBackgroundColor": "#efeff4",
     "navigationBarTitleText": "孕妈饮食",
     "navigationBarTextStyle":"black"
   }
