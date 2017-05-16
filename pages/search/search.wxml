@@ -3,7 +3,7 @@
     <view class="weui-search-bar__form">
       <view class="weui-search-bar__box">
         <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-        <input class="weui-search-bar__input" type="text" value="{{value}}" focus="{{focus}}" placeholder="输入食物名称" bindinput="handleTyping" />
+        <input class="weui-search-bar__input" type="text" value="{{value}}" focus="{{focus}}" placeholder="输入食物名称" bindconfirm="handleConfirm" />
         <view class="weui-icon-clear" wx:if="{{value.length > 0}}" bindtap="clearInput">
           <icon type="clear" size="14"></icon>
         </view>

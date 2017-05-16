@@ -34,9 +34,9 @@ Page({
   },
 
   /**
-   * 处理值输入
+   * 点击完成按钮
    */
-  handleTyping(e) {
+  handleConfirm(e) {
     const { value } = e.detail;
 
     if (value !== '') {
