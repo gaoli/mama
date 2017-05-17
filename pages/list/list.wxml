@@ -10,7 +10,7 @@
 <scroll-view style="height: {{windowHeight}}px" scroll-y="true" bindscrolltolower="handleScrollToLower">
   <navigator class="weui-media-box weui-media-box_appmsg" wx:for="{{list}}" wx:key="objectId" url="../food/food?name={{item.name}}">
     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-      <image class="weui-media-box__thumb" src="{{item.image.url}}" />
+      <image class="weui-media-box__thumb" src="{{item.thumbnailURL}}" />
     </view>
     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
       <view class="weui-media-box__title">{{item.name}}</view>

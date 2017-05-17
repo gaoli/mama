@@ -63,8 +63,28 @@ Page({
       .then((list) => {
         this.page = this.page + 1;
 
+        const data = list.map((item) => {
+          const name = item.get('name');
+          const desc = item.get('desc');
+          const baby = item.get('baby');
+          const pregnant = item.get('pregnant');
+          const puerpera = item.get('puerpera');
+
+          const image = item.get('image');
+          const thumbnailURL = image.thumbnailURL(120, 120);
+
+          return {
+            name,
+            desc,
+            baby,
+            pregnant,
+            puerpera,
+            thumbnailURL,
+          };
+        });
+
         this.setData({
-          list: [...this.data.list, ...list],
+          list: [...this.data.list, ...data],
           loading: false,
         });
       });
