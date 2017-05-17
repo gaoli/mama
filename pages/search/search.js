@@ -39,6 +39,8 @@ Page({
   handleConfirm(e) {
     const { value } = e.detail;
 
+    wx.showNavigationBarLoading();
+
     if (value !== '') {
       new AV.Query('Food')
         .contains('name', value)
@@ -48,12 +50,16 @@ Page({
             value,
             foods,
           });
+
+          wx.hideNavigationBarLoading();
         });
     } else {
       this.setData({
         value,
         foods: [],
       });
+
+      wx.hideNavigationBarLoading();
     }
   },
 });
