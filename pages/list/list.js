@@ -26,18 +26,12 @@ Page({
 
   onLoad(option) {
     const { categoryId, categoryName } = option;
-    const { windowHeight } = wx.getSystemInfoSync();
 
     // 设置导航标题
     this.title = categoryName;
 
     // 设置类别 ID
     this.categoryId = parseInt(categoryId, 10);
-
-    // 设置窗口高度
-    this.setData({
-      windowHeight,
-    });
 
     this.fetchListCount()
       .then((count) => {
