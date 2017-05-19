@@ -4,6 +4,10 @@ Page({
   // 页面标题
   title: '',
 
+  data: {
+    loading: true,
+  },
+
   onLoad(options) {
     const { name } = options;
 
@@ -16,6 +20,7 @@ Page({
       .then((food) => {
         this.setData({
           food,
+          loading: false,
         });
       });
   },

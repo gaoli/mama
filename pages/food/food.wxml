@@ -13,7 +13,14 @@
   </view>
 </template>
 
-<view class="page">
+<view class="page page-loading" wx:if="{{loading === true}}">
+  <view class="weui-loadmore">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</view>
+
+<view class="page" wx:if="{{loading === false}}">
   <view class="page-hd">
     <image class="weui-article__img" src="{{food.image.url}}" mode="aspectFill" />
   </view>
