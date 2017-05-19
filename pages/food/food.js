@@ -1,12 +1,13 @@
 import AV from '../../libs/av';
 
 Page({
-  onLoad(option) {
-    const { name } = option;
+  // 页面标题
+  title: '',
 
-    wx.setNavigationBarTitle({
-      title: name,
-    });
+  onLoad(options) {
+    const { name } = options;
+
+    this.title = name;
 
     new AV.Query('Food')
       .equalTo('name', name)
@@ -17,5 +18,13 @@ Page({
           food,
         });
       });
+  },
+
+  onReady() {
+    const { title } = this;
+
+    wx.setNavigationBarTitle({
+      title,
+    });
   },
 });

@@ -1,6 +1,9 @@
 import AV from '../../libs/av';
 
 Page({
+  // 页面标题
+  title: '',
+
   // 类别 ID
   categoryId: undefined,
 
@@ -25,17 +28,15 @@ Page({
     const { categoryId, categoryName } = option;
     const { windowHeight } = wx.getSystemInfoSync();
 
+    // 设置导航标题
+    this.title = categoryName;
+
     // 设置类别 ID
     this.categoryId = parseInt(categoryId, 10);
 
     // 设置窗口高度
     this.setData({
       windowHeight,
-    });
-
-    // 设置导航标题
-    wx.setNavigationBarTitle({
-      title: categoryName,
     });
 
     this.fetchListCount()
@@ -45,6 +46,14 @@ Page({
       .then(() => {
         this.fetchList();
       });
+  },
+
+  onReady() {
+    const { title } = this;
+
+    wx.setNavigationBarTitle({
+      title,
+    });
   },
 
   /**
