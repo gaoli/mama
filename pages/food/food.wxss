@@ -5,8 +5,51 @@
   height: 100vh;
 }
 
-.weui-article__img {
+.image image {
+  display: block;
   width: 750rpx;
+  height: 240px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  padding: 15px 15px 0;
+  font-size: 15px;
+  color: #888888;
+}
+
+.intro-bd {
+  display: flex;
+  flex: 1;
+}
+
+.intro-ft {
+  margin-left: 30px;
+  margin-right: 15px;
+}
+
+button {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  background-color: transparent;
+}
+
+button::after {
+  border: none;
+}
+
+.share-bd image {
+  display: block;
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.share-ft {
+  color: #1aad19;
 }
 
 .weui-article__h3 {

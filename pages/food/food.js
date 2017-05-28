@@ -5,6 +5,7 @@ Page({
 
   data: {
     loading: true,
+    canIUse: wx.canIUse('button.open-type.share'),
   },
 
   onLoad(options) {

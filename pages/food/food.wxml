@@ -22,34 +22,42 @@
 
 <view class="page" wx:if="{{loading === false}}">
   <view class="page-hd">
-    <image class="weui-article__img" src="{{food.image.url}}" mode="aspectFill" />
+    <view class="image">
+      <image src="{{food.image.url}}" mode="aspectFill" />
+    </view>
+    <view class="intro">
+      <view class="intro-bd">{{food.intro}}</view>
+      <view class="intro-ft" wx:if="{{canIUse}}">
+        <button class="share" open-type="share" hover-class="none">
+          <view class="share-bd">
+            <image src="./images/share.png"/>
+          </view>
+          <view class="share-ft">分享</view>
+        </button>
+      </view>
+    </view>
   </view>
   <view class="page-bd weui-article">
     <view class="weui-article__section">
-      <view class="weui-article__p">{{food.intro}}</view>
+      <view class="weui-article__h3">孕妇能吃{{food.name}}吗？</view>
+      <view class="weui-article__p">
+        <template is="result" data="{{result: food.pregnant}}" />
+      </view>
+      <view class="weui-article__p" wx:for="{{food.pregnantReason}}" wx:key="*this">{{item}}</view>
     </view>
     <view class="weui-article__section">
-      <view class="weui-article__section">
-        <view class="weui-article__h3">孕妇能吃{{food.name}}吗？</view>
-        <view class="weui-article__p">
-          <template is="result" data="{{result: food.pregnant}}" />
-        </view>
-        <view class="weui-article__p" wx:for="{{food.pregnantReason}}" wx:key="*this">{{item}}</view>
+      <view class="weui-article__h3">产妇能吃{{food.name}}吗？</view>
+      <view class="weui-article__p">
+        <template is="result" data="{{result: food.puerpera}}" />
       </view>
-      <view class="weui-article__section">
-        <view class="weui-article__h3">产妇能吃{{food.name}}吗？</view>
-        <view class="weui-article__p">
-          <template is="result" data="{{result: food.puerpera}}" />
-        </view>
-        <view class="weui-article__p" wx:for="{{food.puerperaReason}}" wx:key="*this">{{item}}</view>
+      <view class="weui-article__p" wx:for="{{food.puerperaReason}}" wx:key="*this">{{item}}</view>
+    </view>
+    <view class="weui-article__section">
+      <view class="weui-article__h3">婴儿能吃{{food.name}}吗？</view>
+      <view class="weui-article__p">
+        <template is="result" data="{{result: food.baby}}" />
       </view>
-      <view class="weui-article__section">
-        <view class="weui-article__h3">婴儿能吃{{food.name}}吗？</view>
-        <view class="weui-article__p">
-          <template is="result" data="{{result: food.baby}}" />
-        </view>
-        <view class="weui-article__p" wx:for="{{food.babyReason}}" wx:key="*this">{{item}}</view>
-      </view>
+      <view class="weui-article__p" wx:for="{{food.babyReason}}" wx:key="*this">{{item}}</view>
     </view>
   </view>
 </view>
