@@ -1,8 +1,7 @@
 import AV from '../../libs/av';
 
 Page({
-  // 页面标题
-  title: '',
+  name: '',
 
   data: {
     loading: true,
@@ -11,7 +10,7 @@ Page({
   onLoad(options) {
     const { name } = options;
 
-    this.title = name;
+    this.name = name;
 
     new AV.Query('Food')
       .equalTo('name', name)
@@ -26,10 +25,24 @@ Page({
   },
 
   onReady() {
-    const { title } = this;
+    const { name: title } = this;
 
     wx.setNavigationBarTitle({
       title,
     });
+  },
+
+  onShareAppMessage() {
+    const { name } = this;
+
+    return {
+      title: `孕妈能不能吃${name}？`,
+      path: `pages/food/food?name=${name}`,
+      success: () => {
+        wx.showToast({
+          title: '转发成功',
+        });
+      },
+    };
   },
 });
